@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h1>스토리 작성하는 부분</h1>
+		
+		<form action="" method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Save" />
+		</form>            
+	</body>
+</html>

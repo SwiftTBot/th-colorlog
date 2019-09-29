@@ -8,12 +8,12 @@
 		/* region_list(views에서 넘겨 준 context 딕셔너리 - 리스트) ex. [{'base_color': #fafafa}, {'base_color': #fafafa}, {'base_color': #fafafa}, --- ] */
 		
 		/* TEST CSS, 추후에 static/css에 css파일 별도로 만들 예정 */
-		/* TEST CASE 5개 사용 */
+		/* TEST CASE 6개 사용 */
 		/* 완전히 세부지역별로 DB설정해야 할 것 같기도 함. 크게 지역별로 해버리면 색이 너무 한꺼번에 적용 됨. */
 		
 		/* 강원 (033) */
 		#춘천시 {
-			fill: {{colors.033}};
+			fill: {{colors.064}};
 		}
 		
 		#양구군 {
@@ -35,13 +35,29 @@
 			fill: {{colors.043}}
 		}
 		
+		/* 제주 (064) */
+		#제주시 {
+			fill: {{colors.064}}
+		}
+		
 	</style>
 </head>
 
 <body>
 	<div>
 		<h1 style="padding-left: 25%;">COLOR LOG</h1>
+		<h2>
+			지역번호 참고해라 (model에 있음) <br>
+			{% for color in colors %}
+				{{color}}
+			{% endfor %}
+		</h2>
 	</div>
+	
+	<div>
+		<h1>글 작성하기 부분</h1> <a href="{% url 'story' %}"><button>글쓰기 버튼</button></a> <!-- url은 name값으로 접근 -->
+	</div>
+	
 	<div>
 		<!-- 전도 표시-->
         <svg version="1.1" id="korea_map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
